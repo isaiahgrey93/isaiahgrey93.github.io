@@ -19,7 +19,7 @@ export function getFile (file) {
       ref: 'development',
     },
     transformResponse: function (data) {
-      return atob(JSON.parse(data).content)
+      return atob(JSON.parse(data).content.replace(/\s/g, ''))
     },
   })
 }
