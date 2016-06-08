@@ -41,8 +41,11 @@
     height: 100%;
     display: inline-block;
     &::before {
-      opacity: 0.5;
-      content: '\f401'
+      opacity: 1;
+      content: '\F401';
+      -webkit-font-smoothing: antialiased;
+      text-shadow: rgba(255, 255, 255, 0.01) 0 0 1px;
+      -webkit-text-stroke-width: 0.25px;
     }
     &:hover {
       &::before {
